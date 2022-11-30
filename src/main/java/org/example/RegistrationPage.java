@@ -28,15 +28,15 @@ public class RegistrationPage extends Utils{
 
             //keying in data with the of methods in the Utils class and with the variables declared above
 
-            sendText(_firstName,"Jordan");
-            sendText(_lastName, "Icke");
-            selectFromDropDownListByValue(_selectDateofBirth,"27");
-            selectFromDropDownListByIndext(_selectMonthofBirth,5);
-            selectFromDropDownListByVisibleText(_selectYearofBirth,"1990");
-            selectFromDropDownListByVisibleText(_selectYearofBirth,"1955");
-            sendText(_eMail,"jordan"+timeStamp()+"icke@uk.com");
-            sendText(_passWord, "123456");
-            sendText(_confirmPassword, "123456");
+            sendText(_firstName,LoadProp.getProperty("FirstName"));
+            sendText(_lastName, LoadProp.getProperty("LastName"));
+            selectFromDropDownListByValue(_selectDateofBirth, LoadProp.getProperty("DateOfBirthDay"));
+            selectFromDropDownListByVisibleText(_selectMonthofBirth,LoadProp.getProperty("DateOfBirthMonth"));
+            selectFromDropDownListByVisibleText(_selectYearofBirth,LoadProp.getProperty("DateOfBirthYear"));
+            //selectFromDropDownListByVisibleText(_selectYearofBirth,"1955");
+            sendText(_eMail,LoadProp.getProperty("Email1")+timeStamp()+LoadProp.getProperty("Email2"));
+            sendText(_passWord, LoadProp.getProperty("Password"));
+            sendText(_confirmPassword,LoadProp.getProperty("ConfirmPassword"));
             clickOnElement(By.id("register-button"));
 
 

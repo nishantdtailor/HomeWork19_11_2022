@@ -17,10 +17,11 @@ public class NewReleaseComment extends Utils{
         clickOnElement(By.className("read-more"));
 
         //passing comment comment title
-        sendText(By.id("AddNewComment_CommentTitle"), "Prakash");
+        //sendText(By.id("AddNewComment_CommentTitle"), "Prakash");
+        sendText(By.id("AddNewComment_CommentTitle"), LoadProp.getProperty("CommentTitle"));
 
         //passing comment comment text
-        sendText(By.id("AddNewComment_CommentText"), "Brilliant");
+        sendText(By.id("AddNewComment_CommentText"), LoadProp.getProperty("CommentText"));
 
         //clicking on add comment button
         clickOnElement(By.name("add-comment"));
@@ -42,7 +43,7 @@ public class NewReleaseComment extends Utils{
 
             {
                 //verifying that comment with actual comment that was entered earlier
-                Assert.assertEquals(comments.get(i).getText(), "Prakash");
+                Assert.assertEquals(comments.get(i).getText(), LoadProp.getProperty("CommentTitle"));
 
 
             }

@@ -19,10 +19,10 @@ public class ProductEmailAFriend extends Utils{
 
 
         //entering details
-        sendText(_friendsEmail, "Joe.blogss"+timeStamp()+"@rediff.com");
+        sendText(_friendsEmail, LoadProp.getProperty("EmailaFriend1")+timeStamp()+LoadProp.getProperty("EmailaFriend2"));
 
         //entering details
-        sendText(_personalMessage,"This is an excellent laptop, I would recommend it");
+        sendText(_personalMessage,LoadProp.getProperty("RecommendationText"));
 
         //clicking on button
         clickOnElement(By.xpath("//div[@class=\"buttons\"]/button"));

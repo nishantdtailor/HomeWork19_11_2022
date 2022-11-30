@@ -58,6 +58,20 @@ public class TestSuit extends BaseTest{
 
           currencyVerification.dollarEuroVerification();
       }
+
+      @Test
+      public void hoverOnComputerCategory(){
+
+        homePage.hoverOnComputer();
+
+      }
+
+      @Test
+      public void searchfunciton(){
+
+        homePage.searchFunctionality();
+
+      }
 //
 
 
